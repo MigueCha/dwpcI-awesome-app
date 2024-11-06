@@ -24,13 +24,11 @@ app.use((req, res, next)=>{
   `);
 });
 
-// Asignando el middleware de express
-// al servidor http
-const server = http.createServer(app);
-
 // Definiendo puertos
 const port = 3000;
 const ip = "0.0.0.0"
+
 // Arrancando el servidor
-server.listen(port, ip, () => {
-  console.log(`🤖 Sirviendo en http://localhost:${port}`)});
+app.listen(port, ip, () => {
+  console.log(`🤖 Sirviendo en http://localhost:${port}`);
+});
