@@ -1,0 +1,24 @@
+{
+  "name": "dwpci-awesome-app",
+  "version": "0.0.0",
+  "description": "Proyecto 1 Desarrollo Web en Pila Completa I ITGAM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MigueCha/dwpcI-awesome-app.git"
+  },
+  "keywords": [
+    "Express",
+    "ITGAM",
+    "DWPCI"
+  ],
+  "author": "@Miguel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MigueCha/dwpcI-awesome-app/issues"
+  },
+  "homepage": "https://github.com/MigueCha/dwpcI-awesome-app#readme"
+}
