@@ -3,8 +3,11 @@ import express from 'express';
 import httpStatus from 'http-status';
 
 // Importando el enrutador
-import adminRouter from './routes/admin.routes.js';
-import shopRouter from './routes/shop.routes.js';
+import adminRouter from './routes/admin.route.js';
+import shopRouter from './routes/shop.route.js';
+
+// Se importa path
+import path from 'path';
 
 // Creando la instancia de express
 // que basicamente es un middleware
@@ -21,15 +24,14 @@ app.use(shopRouter);
 // Registrando el middleware para el error
 // 404
 app.use((req, res, next) => {
-    res.status(httpStatus.NOT_FOUND)
-    .send("<h1 style='color: crimson;'>🤷‍♂️ Not found 🤷‍♂️</h1>")
-  });
-  
+  res.status(httpStatus.NOT_FOUND)
+  .sendFile(path.resolve('views','404.html'))
+});
+
 // Definiendo puertos
 const port = 3000;
 const ip = "0.0.0.0"
 
 // Arrancando el servidor
 app.listen(port, ip, () => {
-  console.log(`🤖 Sirviendo en http://localhost:${port}`);
-});
+  console.log(`🤖 Sirviendo en http://localhost:${port}`)});
