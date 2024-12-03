@@ -6,11 +6,16 @@ import path from 'path';
 // Creando una instancia del enrutador de express
 const router = Router();
 
-// GET /
-router.get('/', (req, res)=>{
-    console.log("📢 Sirviendo la ruta '/'");
-    res.sendFile(path.resolve('views','shop.html'));
-  });
+// Importando productos
+import { products } from './admin.routes.js';
+
+  // GET /
+  router.get('/', (req, res)=>{
+  // Mostrando productos en memoria
+  console.log(products);
+  console.log("📢 Sirviendo la ruta '/'");
+  res.sendFile(path.resolve('views','shop.html'));
+});
 
 // GET /about
 router.get('/about', (req, res) => {
