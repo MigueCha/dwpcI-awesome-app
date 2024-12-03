@@ -14,7 +14,7 @@ import { products } from './admin.routes.js';
   // Mostrando productos en memoria
   console.log(products);
   console.log("📢 Sirviendo la ruta '/'");
-  res.sendFile(path.resolve('views','shop.html'));
+  res.render('shop',{layout: false});
 });
 
 // GET /about
