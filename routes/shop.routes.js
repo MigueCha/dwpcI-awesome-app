@@ -12,10 +12,12 @@ const router = Router();
   // Mostrando productos en memoria
   console.log(products);
   console.log("📢 Sirviendo la ruta '/'");
+  console.log(`length: ${ products.length === 0 }`);
   res.render('shop', { 
     shop: 'active', 
     docTitle:"Shop",
     viewStyle: '/css/product.css',
+    isProductsListEmpty: products.length === 0,
     products
   });
 });
